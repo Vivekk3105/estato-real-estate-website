@@ -213,6 +213,7 @@ img {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   animation: fadeInUp 1s ease 0.4s both;
+  margin-bottom: 1.2rem;
 }
 
 .hero-search-form .form-control,
