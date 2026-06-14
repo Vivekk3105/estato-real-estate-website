@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properties - Estato</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <i class="fa-solid fa-house-chimney"></i> Estato
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="properties.html">Properties</a></li>
+                    <li class="nav-item"><a class="nav-link" href="agents.html">Agents</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-none d-lg-block ms-3">
+                    <a href="contact.html" class="btn btn-custom-primary">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1>Property Listings</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Properties</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Properties Grid & Filtering -->
+    <section class="section-padding pt-0">
+        <div class="container">
+            
+            <!-- Filters -->
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <div class="filter-controls">
+                        <button class="filter-btn active" data-filter="all">All Properties</button>
+                        <button class="filter-btn" data-filter="apartment">Apartment</button>
+                        <button class="filter-btn" data-filter="villa">Villa</button>
+                        <button class="filter-btn" data-filter="house">House</button>
+                        <button class="filter-btn" data-filter="commercial">Commercial</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Search Form -->
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <form id="propertySearchForm" class="bg-white p-4 rounded shadow-sm border">
+                        <div class="row g-3">
+                            <div class="col-md-5">
+                                <input type="text" class="form-control" placeholder="Search by Location (e.g. Pune)" id="searchLocation">
+                            </div>
+                            <div class="col-md-4">
+                                <select class="form-select" id="searchType">
+                                    <option value="any">Any Type</option>
+                                    <option value="apartment">Apartment</option>
+                                    <option value="villa">Villa</option>
+                                    <option value="house">House</option>
+                                    <option value="commercial">Commercial</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="submit" class="btn btn-custom-primary w-100">Filter</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="row g-4" id="propertyGrid">
+                
+                <!-- Property 1 -->
+                <div class="col-lg-4 col-md-6 property-item" data-category="villa">
+                    <div class="property-card">
+                        <div class="property-img">
+                            <span class="property-badge">For Sale</span>
+                            <span class="property-price">₹ 1,25,00,000</span>
+                            <img src="../images/image_9.jpg" alt="Property">
+                        </div>
+                        <div class="property-content">
+                            <h3 class="property-title"><a href="property-details.html">Modern Luxury Villa</a></h3>
+                            <div class="property-location"><i class="fa-solid fa-location-dot"></i> 123 Bandra West, Mumbai</div>
+                            <div class="property-features">
+                                <div class="feature-item"><i class="fa-solid fa-bed"></i> 4 Beds</div>
+                                <div class="feature-item"><i class="fa-solid fa-bath"></i> 3 Baths</div>
+                                <div class="feature-item"><i class="fa-solid fa-vector-square"></i> 3500 Sqft</div>
+                            </div>
+                            <div class="property-footer">
+                                <span class="text-secondary"><i class="fa-solid fa-user"></i> Ramesh Patil</span>
+                                <a href="property-details.html" class="btn btn-custom-outline btn-sm">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property 2 -->
+                <div class="col-lg-4 col-md-6 property-item" data-category="apartment">
+                    <div class="property-card">
+                        <div class="property-img">
+                            <span class="property-badge bg-primary">For Rent</span>
+                            <span class="property-price">₹ 45,000 / mo</span>
+                            <img src="../images/image_2.jpg" alt="Property">
+                        </div>
+                        <div class="property-content">
+                            <h3 class="property-title"><a href="property-details.html">Skyline Penthouse Apartment</a></h3>
+                            <div class="property-location"><i class="fa-solid fa-location-dot"></i> 45 Kalyani Nagar, Pune</div>
+                            <div class="property-features">
+                                <div class="feature-item"><i class="fa-solid fa-bed"></i> 3 Beds</div>
+                                <div class="feature-item"><i class="fa-solid fa-bath"></i> 2 Baths</div>
+                                <div class="feature-item"><i class="fa-solid fa-vector-square"></i> 2200 Sqft</div>
+                            </div>
+                            <div class="property-footer">
+                                <span class="text-secondary"><i class="fa-solid fa-user"></i> Anjali Deshmukh</span>
+                                <a href="property-details.html" class="btn btn-custom-outline btn-sm">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property 3 -->
+                <div class="col-lg-4 col-md-6 property-item" data-category="house">
+                    <div class="property-card">
+                        <div class="property-img">
+                            <span class="property-badge">For Sale</span>
+                            <span class="property-price">₹ 85,00,000</span>
+                            <img src="../images/image_10.jpg" alt="Property">
+                        </div>
+                        <div class="property-content">
+                            <h3 class="property-title"><a href="property-details.html">Cozy Family House</a></h3>
+                            <div class="property-location"><i class="fa-solid fa-location-dot"></i> 78 Kothrud, Pune</div>
+                            <div class="property-features">
+                                <div class="feature-item"><i class="fa-solid fa-bed"></i> 4 Beds</div>
+                                <div class="feature-item"><i class="fa-solid fa-bath"></i> 2 Baths</div>
+                                <div class="feature-item"><i class="fa-solid fa-vector-square"></i> 2800 Sqft</div>
+                            </div>
+                            <div class="property-footer">
+                                <span class="text-secondary"><i class="fa-solid fa-user"></i> Suresh Kadam</span>
+                                <a href="property-details.html" class="btn btn-custom-outline btn-sm">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Property 4 -->
+                <div class="col-lg-4 col-md-6 property-item" data-category="commercial">
+                    <div class="property-card">
+                        <div class="property-img">
+                            <span class="property-badge bg-primary">For Rent</span>
+                            <span class="property-price">₹ 1,20,000 / mo</span>
+                            <img src="../images/image_26.jpg" alt="Property">
+                        </div>
+                        <div class="property-content">
+                            <h3 class="property-title"><a href="property-details.html">Prime Office Space</a></h3>
+                            <div class="property-location"><i class="fa-solid fa-location-dot"></i> Hinjewadi, Pune</div>
+                            <div class="property-features">
+                                <div class="feature-item"><i class="fa-solid fa-building"></i> 5 Rooms</div>
+                                <div class="feature-item"><i class="fa-solid fa-bath"></i> 4 Baths</div>
+                                <div class="feature-item"><i class="fa-solid fa-vector-square"></i> 5000 Sqft</div>
+                            </div>
+                            <div class="property-footer">
+                                <span class="text-secondary"><i class="fa-solid fa-user"></i> Priya Shinde</span>
+                                <a href="property-details.html" class="btn btn-custom-outline btn-sm">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property 5 -->
+                <div class="col-lg-4 col-md-6 property-item" data-category="apartment">
+                    <div class="property-card">
+                        <div class="property-img">
+                            <span class="property-badge">For Sale</span>
+                            <span class="property-price">₹ 55,00,000</span>
+                            <img src="../images/image_21.jpg" alt="Property">
+                        </div>
+                        <div class="property-content">
+                            <h3 class="property-title"><a href="property-details.html">Downtown Studio Apartment</a></h3>
+                            <div class="property-location"><i class="fa-solid fa-location-dot"></i> 15 Dharampeth, Nagpur</div>
+                            <div class="property-features">
+                                <div class="feature-item"><i class="fa-solid fa-bed"></i> 1 Bed</div>
+                                <div class="feature-item"><i class="fa-solid fa-bath"></i> 1 Bath</div>
+                                <div class="feature-item"><i class="fa-solid fa-vector-square"></i> 900 Sqft</div>
+                            </div>
+                            <div class="property-footer">
+                                <span class="text-secondary"><i class="fa-solid fa-user"></i> Ramesh Patil</span>
+                                <a href="property-details.html" class="btn btn-custom-outline btn-sm">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property 6 -->
+                <div class="col-lg-4 col-md-6 property-item" data-category="villa">
+                    <div class="property-card">
+                        <div class="property-img">
+                            <span class="property-badge bg-primary">For Rent</span>
+                            <span class="property-price">₹ 85,000 / mo</span>
+                            <img src="../images/image_27.jpg" alt="Property">
+                        </div>
+                        <div class="property-content">
+                            <h3 class="property-title"><a href="property-details.html">Beachfront Villa</a></h3>
+                            <div class="property-location"><i class="fa-solid fa-location-dot"></i> 10 Gangapur Road, Nashik</div>
+                            <div class="property-features">
+                                <div class="feature-item"><i class="fa-solid fa-bed"></i> 5 Beds</div>
+                                <div class="feature-item"><i class="fa-solid fa-bath"></i> 4 Baths</div>
+                                <div class="feature-item"><i class="fa-solid fa-vector-square"></i> 4500 Sqft</div>
+                            </div>
+                            <div class="property-footer">
+                                <span class="text-secondary"><i class="fa-solid fa-user"></i> Anjali Deshmukh</span>
+                                <a href="property-details.html" class="btn btn-custom-outline btn-sm">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 footer-widget">
+                    <div class="footer-logo">
+                        <i class="fa-solid fa-house-chimney"></i> Estato
+                    </div>
+                    <p>Your premier destination for finding luxury homes, commercial spaces, and premium real estate services globally.</p>
+                    <div class="agent-social mt-4 justify-content-start">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-widget">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html" class="replace-page">About Us</a></li>
+                        <li><a href="services.html" class="replace-page">Our Services</a></li>
+                        <li><a href="agents.html" class="replace-page">Meet Our Agents</a></li>
+                        <li><a href="contact.html" class="replace-page">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-widget">
+                    <h4>Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="properties.html" class="replace-page">Luxury Villas</a></li>
+                        <li><a href="properties.html" class="replace-page">Modern Apartments</a></li>
+                        <li><a href="properties.html" class="replace-page">Commercial Properties</a></li>
+                        <li><a href="properties.html" class="replace-page">Family Houses</a></li>
+                        <li><a href="properties.html" class="replace-page">Studio Apartments</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-widget">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-links footer-contact mt-4">
+                        <li><i class="fa-solid fa-location-dot"></i> 123 Estato Bhawan, Shivaji Nagar, Pune 411005</li>
+                        <li><i class="fa-solid fa-phone"></i> +91 98765 43210</li>
+                        <li><i class="fa-solid fa-envelope"></i> info@estato.in</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <p>&copy; 2026 Estato Real Estate. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll To Top -->
+    <div class="scroll-top"><i class="fa-solid fa-arrow-up"></i></div>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/property-filter.js"></script>
+</body>
+</html>

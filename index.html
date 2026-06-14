@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estato - Premium Real Estate</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- Sticky Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fa-solid fa-house-chimney"></i> Estato
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/properties.html">Properties</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/agents.html">Agents</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="d-none d-lg-block ms-3">
+                    <a href="pages/contact.html" class="btn btn-custom-primary">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner with Property Search -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <div class="hero-content">
+                        <h1>Find Your Dream Home with Estato</h1>
+                        <p>We offer a premium selection of residential and commercial properties tailored to your luxurious lifestyle. Start your journey today.</p>
+                        
+                        <!-- Property Search Form -->
+                        <form id="heroSearchForm" action="pages/properties.html" class="hero-search-form mt-4">
+                            <div class="row g-2">
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control" placeholder="Location (e.g. Pune)" id="heroSearchLocation">
+                                </div>
+                                <div class="col-md-4">
+                                    <select class="form-select" id="heroSearchType">
+                                        <option value="any" selected>Property Type</option>
+                                        <option value="villa">Villa</option>
+                                        <option value="apartment">Apartment</option>
+                                        <option value="house">House</option>
+                                        <option value="commercial">Commercial</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <button type="submit" class="btn btn-custom-primary w-100 h-100 d-flex align-items-center justify-content-center">
+                                        <i class="fa-solid fa-magnifying-glass"></i> Search
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Property Categories -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>Explore Categories</h2>
+                <p>Browse our extensive collection of properties categorised for your convenience.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-3 col-sm-6">
+                    <a href="pages/properties.html" class="category-card">
+                        <img src="images/image_8.jpg" alt="Apartment">
+                        <div class="category-content">
+                            <h3>Apartment</h3>
+                            <p>120 Properties</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <a href="pages/properties.html" class="category-card">
+                        <img src="images/image_13.jpg" alt="Villa">
+                        <div class="category-content">
+                            <h3>Villa</h3>
+                            <p>85 Properties</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <a href="pages/properties.html" class="category-card">
+                        <img src="images/image_29.jpg" alt="House">
+                        <div class="category-content">
+                            <h3>House</h3>
+                            <p>200 Properties</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <a href="pages/properties.html" class="category-card">
+                        <img src="images/image_14.jpg" alt="Commercial">
+                        <div class="category-content">
+                            <h3>Commercial</h3>
+                            <p>40 Properties</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Properties -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured Properties</h2>
+                <p>Handpicked exclusive properties ready for you to move in.</p>
+            </div>
+            <div class="row g-4">
+                <!-- Property 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="property-card">
+                        <div class="property-img">
+                            <span class="property-badge">For Sale</span>
+                            <span class="property-price">₹ 1,25,00,000</span>
+                            <img src="images/image_9.jpg" alt="Luxury Villa">
+                        </div>
+                        <div class="property-content">
+                            <h3 class="property-title"><a href="pages/property-details.html">Modern Luxury Villa</a></h3>
+                            <div class="property-location">
+                                <i class="fa-solid fa-location-dot"></i> 123 Bandra West, Mumbai
+                            </div>
+                            <div class="property-features">
+                                <div class="feature-item"><i class="fa-solid fa-bed"></i> 4 Beds</div>
+                                <div class="feature-item"><i class="fa-solid fa-bath"></i> 3 Baths</div>
+                                <div class="feature-item"><i class="fa-solid fa-vector-square"></i> 3500 Sqft</div>
+                            </div>
+                            <div class="property-footer">
+                                <span class="text-secondary"><i class="fa-solid fa-user"></i> Ramesh Patil</span>
+                                <a href="pages/property-details.html" class="btn btn-custom-outline btn-sm">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Property 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="property-card">
+                        <div class="property-img">
+                            <span class="property-badge bg-primary">For Rent</span>
+                            <span class="property-price">₹ 45,000 / mo</span>
+                            <img src="images/image_2.jpg" alt="Penthouse">
+                        </div>
+                        <div class="property-content">
+                            <h3 class="property-title"><a href="pages/property-details.html">Skyline Penthouse</a></h3>
+                            <div class="property-location">
+                                <i class="fa-solid fa-location-dot"></i> 45 Kalyani Nagar, Pune
+                            </div>
+                            <div class="property-features">
+                                <div class="feature-item"><i class="fa-solid fa-bed"></i> 3 Beds</div>
+                                <div class="feature-item"><i class="fa-solid fa-bath"></i> 2 Baths</div>
+                                <div class="feature-item"><i class="fa-solid fa-vector-square"></i> 2200 Sqft</div>
+                            </div>
+                            <div class="property-footer">
+                                <span class="text-secondary"><i class="fa-solid fa-user"></i> Anjali Deshmukh</span>
+                                <a href="pages/property-details.html" class="btn btn-custom-outline btn-sm">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Property 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="property-card">
+                        <div class="property-img">
+                            <span class="property-badge">For Sale</span>
+                            <span class="property-price">₹ 85,00,000</span>
+                            <img src="images/image_10.jpg" alt="Family House">
+                        </div>
+                        <div class="property-content">
+                            <h3 class="property-title"><a href="pages/property-details.html">Cozy Family House</a></h3>
+                            <div class="property-location">
+                                <i class="fa-solid fa-location-dot"></i> 78 Kothrud, Pune
+                            </div>
+                            <div class="property-features">
+                                <div class="feature-item"><i class="fa-solid fa-bed"></i> 4 Beds</div>
+                                <div class="feature-item"><i class="fa-solid fa-bath"></i> 2 Baths</div>
+                                <div class="feature-item"><i class="fa-solid fa-vector-square"></i> 2800 Sqft</div>
+                            </div>
+                            <div class="property-footer">
+                                <span class="text-secondary"><i class="fa-solid fa-user"></i> Suresh Kadam</span>
+                                <a href="pages/property-details.html" class="btn btn-custom-outline btn-sm">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="pages/properties.html" class="btn btn-custom-primary">View All Properties</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Us</h2>
+                <p>We provide full service at every step for your real estate needs.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="icon-wrapper">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h3>Trusted by Thousands</h3>
+                        <p>Our transparency and work ethic have made us a trusted partner in the real estate industry.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="icon-wrapper">
+                            <i class="fa-solid fa-house-circle-check"></i>
+                        </div>
+                        <h3>Wide Range of Properties</h3>
+                        <p>We offer a diverse portfolio of properties matching different budgets and lifestyle needs.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="icon-wrapper">
+                            <i class="fa-solid fa-hand-holding-dollar"></i>
+                        </div>
+                        <h3>Financing Made Easy</h3>
+                        <p>Get fast and reliable financing options through our network of trusted banking partners.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Statistics Counter -->
+    <section class="counter-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-6">
+                    <div class="counter-item">
+                        <h3 class="counter-value" data-target="1500">0</h3>
+                        <p>Properties Sold</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="counter-item">
+                        <h3 class="counter-value" data-target="850">0</h3>
+                        <p>Happy Clients</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="counter-item">
+                        <h3 class="counter-value" data-target="45">0</h3>
+                        <p>Expert Agents</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="counter-item">
+                        <h3 class="counter-value" data-target="15">0</h3>
+                        <p>Years Experience</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Agents -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Meet Our Agents</h2>
+                <p>Our experienced professionals are here to guide you.</p>
+            </div>
+            <div class="row g-4">
+                <!-- Agent 1 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="agent-card">
+                        <div class="agent-img">
+                            <img src="images/person1.jpeg" alt="Agent">
+                        </div>
+                        <div class="agent-info">
+                            <h4>Ramesh Patil</h4>
+                            <p>Senior Agent</p>
+                            <div class="agent-social">
+                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Agent 2 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="agent-card">
+                        <div class="agent-img">
+                            <img src="images/person2.jpeg" alt="Agent">
+                        </div>
+                        <div class="agent-info">
+                            <h4>Anjali Deshmukh</h4>
+                            <p>Luxury Specialist</p>
+                            <div class="agent-social">
+                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Agent 3 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="agent-card">
+                        <div class="agent-img">
+                            <img src="images/person1.jpeg" alt="Agent">
+                        </div>
+                        <div class="agent-info">
+                            <h4>Suresh Kadam</h4>
+                            <p>Commercial Broker</p>
+                            <div class="agent-social">
+                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Agent 4 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="agent-card">
+                        <div class="agent-img">
+                            <img src="images/person2.jpeg" alt="Agent">
+                        </div>
+                        <div class="agent-info">
+                            <h4>Priya Shinde</h4>
+                            <p>Consultant</p>
+                            <div class="agent-social">
+                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="pages/agents.html" class="btn btn-custom-outline">View All Agents</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Testimonials -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Clients Say</h2>
+                <p>Read about the experiences of our satisfied customers.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="testimonial-card">
+                        <div class="mb-3 text-warning">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Estato made finding our dream home incredibly easy. The agents are professional, attentive, and really understood what we were looking for. Highly recommended!"</p>
+                        <div class="testimonial-author">
+                            <img src="images/person2.jpeg" alt="Client">
+                            <div>
+                                <h5>Smita Kulkarni</h5>
+                                <span>Homeowner</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="testimonial-card">
+                        <div class="mb-3 text-warning">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <p class="testimonial-text">"Excellent service from start to finish. They handled the sale of my property swiftly and achieved a price above my expectations. A great team to work with."</p>
+                        <div class="testimonial-author">
+                            <img src="images/person1.jpeg" alt="Client">
+                            <div>
+                                <h5>Vijay Jadhav</h5>
+                                <span>Property Seller</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 footer-widget">
+                    <div class="footer-logo">
+                        <i class="fa-solid fa-house-chimney"></i> Estato
+                    </div>
+                    <p>Your premier destination for finding luxury homes, commercial spaces, and premium real estate services globally.</p>
+                    <div class="agent-social mt-4 justify-content-start">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-widget">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pages/about.html" class="replace-page">About Us</a></li>
+                        <li><a href="pages/services.html" class="replace-page">Our Services</a></li>
+                        <li><a href="pages/agents.html" class="replace-page">Meet Our Agents</a></li>
+                        <li><a href="pages/contact.html" class="replace-page">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-widget">
+                    <h4>Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="pages/properties.html" class="replace-page">Luxury Villas</a></li>
+                        <li><a href="pages/properties.html" class="replace-page">Modern Apartments</a></li>
+                        <li><a href="pages/properties.html" class="replace-page">Commercial Properties</a></li>
+                        <li><a href="pages/properties.html" class="replace-page">Family Houses</a></li>
+                        <li><a href="pages/properties.html" class="replace-page">Studio Apartments</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-widget">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-links footer-contact mt-4">
+                        <li><i class="fa-solid fa-location-dot"></i> 123 Estato Bhawan, Shivaji Nagar, Pune 411005</li>
+                        <li><i class="fa-solid fa-phone"></i> +91 98765 43210</li>
+                        <li><i class="fa-solid fa-envelope"></i> info@estato.in</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <p>&copy; 2026 Estato Real Estate. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll To Top -->
+    <div class="scroll-top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/validation.js"></script>
+</body>
+</html>
